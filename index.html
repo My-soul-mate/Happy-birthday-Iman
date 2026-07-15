@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To My Queen Iman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="bgLayer"></div>
+<div id="bgOverlay"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="whisper">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<audio id="bgMusic" src="music.mp3" loop></audio>
+<audio id="voiceAudio" src="voice.opus"></audio>
+
+<!-- شاشة التحميل -->
+<section id="preloader" class="screen">
+  <div class="glass loader-glass">
+    <div class="loader-candle">
+      <span class="flame"></span>
+      <span class="wax"></span>
+    </div>
+    <h1>To My Queen Iman</h1>
+    <p>قطعة من القلب... صُنعت من أجلكِ وحدكِ</p>
+    <div class="load-bar-wrap">
+      <div class="load-bar-inner"></div>
+    </div>
+  </div>
+</section>
+
+<!-- كلمة المرور -->
+<section id="passwordScreen" class="screen hidden">
+  <div class="glass pw-glass">
+    <span class="small-label">بوابة القلب</span>
+    <h1 class="pw-title">To My Queen Iman</h1>
+    <p class="lead">
+      هذا ليس مجرد موقع... هذه قطعة من قلبي أخفيتها لكِ،
+      لأن اليوم ليس يومًا عاديًا؛ اليوم وُلدتِ أجمل نعمة في حياتي.
+    </p>
+    <div class="hint-box">
+      أكملي الجملة التي لا أتمناها أبدًا:<br/>
+      <strong>ان فقدتكِ لن ...</strong>
+    </div>
+    <div class="pw-form">
+      <input type="password" id="pwInput" placeholder="اكتبي كلمة المرور هنا" />
+      <button class="btn-gold" id="pwBtn">افتحي قلبي</button>
+    </div>
+    <p class="err" id="pwErr"></p>
+  </div>
+</section>
+
+<!-- رعب -->
+<div id="horrorOverlay" class="hidden">
+  <img src="horror.jpg" alt="horror" />
+</div>
+
+<!-- صفحة الصوت -->
+<section id="voiceScreen" class="screen hidden">
+  <div class="glass voice-glass">
+    <span class="small-label">رسالة خاصة</span>
+    <h1 class="iman-name">إيمان</h1>
+    <p class="voice-note">قبل أن تدخلي... هناك شيء أريدكِ أن تسمعيه</p>
+    <button class="btn-gold" id="playVoiceBtn">اضغطي هنا واسمعي قلبي</button>
+    <div class="sound-wave" id="soundWave">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <button class="btn-gold hidden" id="enterBtn" style="margin-top:24px">
+      ادخلي يا أميرتي ✨
+    </button>
+  </div>
+</section>
+
+<!-- الموقع الكامل -->
+<div id="app" class="hidden">
+
+  <header id="topbar">
+    <div>
+      <span class="brand-title">To My Queen Iman</span>
+      <span class="brand-sub">صُمم بحب من محمد أمين لإيمان</span>
+    </div>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#stars">النجوم</a>
+      <a href="#secrets">أسرارنا</a>
+      <a href="#promises">وعودي</a>
+      <a href="#qualities">أحبها فيكِ</a>
+      <a href="#gallery">المعرض</a>
+      <a href="#cake">الشموع</a>
+      <a href="#gift">الهدية</a>
+      <a href="#game">القلوب</a>
+      <a href="#wish">الأمنية</a>
+      <a href="#timeline">الزمن</a>
+      <a href="#poems">القصائد</a>
+    </nav>
+    <button class="btn-outline" id="musicToggle">⏸ إيقاف</button>
+  </header>
+
+  <main>
+
+    <!-- الرئيسية -->
+    <section id="home" class="section">
+      <div class="sec-card glass">
+        <div class="hero-grid">
+          <div>
+            <span class="small-label">31 / 07</span>
+            <h1>إنه أجمل يوم في حياتكِ وحياتي حين وُلدتِ</h1>
+            <p>
+              بين الغموض الذي يشبهني، والرقة التي تشبهكِ،
+              وُلد هذا المكان ليحمل لكِ اعترافًا طويلًا لا يشبه أي شيء آخر.
+            </p>
+            <div class="counter-box">
+              <span>6 سنوات من الحب</span>
+              <strong id="loveCounter">...</strong>
+              <small>منذ 17 / 06 / 2020</small>
+            </div>
+            <div class="hero-btns">
+              <a href="#cake" class="btn-gold">اذهبي إلى الشموع 🕯️</a>
+              <a href="#wish" class="btn-outline">اكتبي أمنيتكِ ⭐</a>
+            </div>
+          </div>
+          <div class="heart-wrap">
+            <div class="heart"></div>
+            <p class="heart-caption">نبضي يعرف اسمكِ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- النجوم -->
+    <section id="stars" class="section">
+      <div class="sec-card glass">
+        <h2>قلب من النجوم ⭐</h2>
+        <p class="sec-note">11 نجمة، كل نجمة تحمل صورة وبيت شعر... اضغطي لتكتشفي</p>
+        <div class="stars-field" id="starsField"></div>
+      </div>
+      <div class="modal-backdrop hidden" id="starModal">
+        <div class="modal-box glass">
+          <button class="close-btn" id="closeStarModal">×</button>
+          <img id="starModalImg" src="" alt="" />
+          <p id="starModalPoem"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- أسرارنا -->
+    <section id="secrets" class="section">
+      <div class="sec-card glass">
+        <h2>أسرارنا 🤫</h2>
+        <p class="sec-note">صفحات من اعترافات لا يعرفها إلا القلب</p>
+        <div class="book">
+          <div class="page" id="pageRight"></div>
+          <div class="page" id="pageLeft"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- وعودي -->
+    <section id="promises" class="section">
+      <div class="sec-card glass">
+        <h2>وعودي لكِ 💍</h2>
+        <p class="sec-note">محفورة على خاتم ذهبي، لا تمحوها السنوات</p>
+        <div class="ring-wrap">
+          <div class="ring"></div>
+          <ul class="ring-list" id="ringList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- الصفات -->
+    <section id="qualities" class="section">
+      <div class="sec-card glass">
+        <h2>الأشياء التي أحبها فيكِ 💖</h2>
+        <p class="sec-note">اضغطي على كل صورة لتظهر صفة من صفاتكِ الجميلة</p>
+        <div class="qualities-grid" id="qualitiesGrid"></div>
+      </div>
+    </section>
+
+    <!-- المعرض -->
+    <section id="gallery" class="section">
+      <div class="sec-card glass">
+        <h2>معرض الصور 🎠</h2>
+        <p class="sec-note">معرض ثلاثي الأبعاد يدور تلقائيًا</p>
+        <div class="gallery-scene">
+          <div class="gallery-3d" id="gallery3d"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الكيكة -->
+    <section id="cake" class="section">
+      <div class="sec-card glass">
+        <h2>كيكة الـ 19 شمعة 🎂</h2>
+        <p class="sec-note">فعّلي الميكروفون وانفخي لإطفاء الشموع، أو استخدمي الزر اليدوي</p>
+        <div class="cake-controls">
+          <button class="btn-gold" id="enableMicBtn">تفعيل الميكروفون 🎤</button>
+          <button class="btn-outline hidden" id="manualBtn">إطفاء يدوي</button>
+          <span id="micStatus">الميكروفون غير مفعل بعد</span>
+        </div>
+        <div class="candles-count" id="candlesCount">تبقت 19 شمعة</div>
+        <div class="cake-area">
+          <div class="candles-row" id="candlesRow"></div>
+          <div class="cake-base">
+            <span class="icing"></span>
+            <span class="cake-stripe s1"></span>
+            <span class="cake-stripe s2"></span>
+          </div>
+        </div>
+        <div class="love-word" id="loveWord">
+          ستظهر هنا كلمة "أحبكِ" بلغة مختلفة عند كل شمعة 💛
+        </div>
+      </div>
+    </section>
+
+    <!-- النهاية بعد آخر شمعة -->
+    <div id="finalScreen" class="hidden">
+      <div class="final-box">
+        <p>كل هذه اللغات لا تكفي لأصف لكِ حبي</p>
+        <h2>كل عام وأنتِ حياتي كلها 💛</h2>
+        <button class="btn-gold" id="closeFinal">العودة إلى الموقع</button>
+      </div>
+    </div>
+
+    <!-- الهدية -->
+    <section id="gift" class="section">
+      <div class="sec-card glass">
+        <h2>صندوق الهدية 🎁</h2>
+        <p class="sec-note">اضغطي على الصندوق ليفتح قلبه لكِ</p>
+        <div class="gift-area">
+          <div class="gift-box" id="giftBox">
+            <div class="g-lid"></div>
+            <div class="g-body"></div>
+            <div class="g-rv"></div>
+            <div class="g-rh"></div>
+          </div>
+          <div class="gift-msg hidden" id="giftMsg">
+            <h3>إيمان</h3>
+            <div class="mini-heart"></div>
+            <p>
+              عندما اعترفتُ لكِ بحبي أول مرة،<br/>
+              لم يكن حب صداقة، ولا حب علاقة حميمية،<br/>
+              لقد كان الحب حقًا...<br/>
+              لم يتمحور حول ماهية علاقتنا، بل كان غير محدود.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- لعبة القلوب -->
+    <section id="game" class="section">
+      <div class="sec-card glass">
+        <h2>لعبة اجمعي القلوب 💛</h2>
+        <p class="sec-note">10 قلوب في 15 ثانية... هل تستطيعين؟</p>
+        <div class="game-top">
+          <button class="btn-gold" id="startGame">ابدئي اللعبة</button>
+          <div class="game-info">
+            <span id="gTimer">⏱ 15</span>
+            <span id="gScore">💛 0 / 10</span>
+          </div>
+        </div>
+        <div class="game-area" id="gameArea"></div>
+        <p class="game-msg" id="gameMsg"></p>
+      </div>
+    </section>
+
+    <!-- الأمنية -->
+    <section id="wish" class="section">
+      <div class="sec-card glass" style="position:relative">
+        <h2 id="wishTitle">نجمة الأمنية ⭐</h2>
+        <p class="sec-note">
+          اكتبي أمنيتكِ... ستتحول إلى غبار ذهبي وتختفي،
+          ولا يعرفها أحد غير قلبكِ
+        </p>
+        <div id="wishForm" class="wish-wrap">
+          <textarea id="wishInput" placeholder="اكتبي أمنيتكِ هنا..."></textarea>
+          <br/><br/>
+          <button class="btn-gold" id="saveWish">أرسلي الأمنية إلى النجمة ⭐</button>
+        </div>
+        <div class="wish-done hidden" id="wishDone">
+          ✨ اختفت الأمنية في الغبار الذهبي... ولم يبقَ منها هنا شيء
+        </div>
+        <div id="goldDust"></div>
+      </div>
+    </section>
+
+    <!-- نافذة الأمنية السرية -->
+    <div id="adminModal" class="hidden">
+      <div class="admin-box glass">
+        <button class="close-btn" id="closeAdmin">×</button>
+        <h3>🔐 الأمنية المحفوظة</h3>
+        <p id="adminWishText">لا توجد أمنية بعد</p>
+      </div>
+    </div>
+
+    <!-- الخط الزمني -->
+    <section id="timeline" class="section">
+      <div class="sec-card glass">
+        <h2>الخط الزمني 🕰️</h2>
+        <p class="sec-note">من 2020 إلى 2026... قصتنا</p>
+        <div class="timeline" id="timelineEl"></div>
+      </div>
+    </section>
+
+    <!-- القصائد -->
+    <section id="poems" class="section">
+      <div class="sec-card glass">
+        <h2>قصائد لكِ 📜</h2>
+        <p class="sec-note">كلمات لا يكفيها كتاب</p>
+        <div class="poem">
+          <h3>القصيدة الأولى</h3>
+          <p>
+            يا أميرة القلب، ويا سيدة الروح..<br/>
+            منذ أن عرفتكِ، أزهرت في داخلي بساتين من نور.<br/>
+            أنتِ لستِ فقط رفيقة دربي، أنتِ مأمني، والجزء الأجمل من روحي.<br/><br/>
+            سألتُ الأيام عن سر جمالها، فأشارت إليكِ..<br/>
+            وسألتُ قلبي عن سر نبضه، فنطق باسمكِ..<br/>
+            يا من جعلتِ من الظلام فجرًا، ومن الصمت أغنية..<br/><br/>
+            أحبكِ بعدد اللحظات التي فكرت فيها بكِ،<br/>
+            وبعدد المرات التي تمنيتكِ فيها بجانبي.
+          </p>
+        </div>
+        <div class="poem">
+          <h3>القصيدة الثانية</h3>
+          <p>
+            ما بين اسمكِ ونبضي طريق لا يراه أحد،<br/>
+            لكنه الطريق الوحيد الذي يصلني إلى الطمأنينة.<br/>
+            إن اقتربتِ، هدأ العالم كله في داخلي،<br/>
+            وإن غبتِ، شعرتُ أن المسافات كلها صارت أثقل.<br/>
+            لذلك لا أحتاج في هذا العالم إلا شيئًا واحدًا فقط... أن تبقي.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    صُمم هذا المكان بحب، ليبقى شاهدًا على شيء لا يشبه إلا إيمان 💛
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+                                    </html> 
